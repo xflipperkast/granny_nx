@@ -74,6 +74,7 @@ Granny NX supports touchscreen and Nintendo Switch controller input. Gameplay co
 Open a terminal in `granny_nx`. The build script uses `/opt/devkitpro` by default; set `DEVKITPRO` and `DEVKITA64` if your SDK is elsewhere.
 
 Build:
+make the build files example to run:
 
 ```sh
 bash build.sh
@@ -83,12 +84,6 @@ Rebuild from scratch:
 
 ```sh
 bash build.sh clean
-```
-
-On Windows, run:
-
-```bat
-build_clean.bat
 ```
 
 Run the host checks:
@@ -109,8 +104,6 @@ Place these two files on your SD card:
 sd:/switch/granny_nx/granny_nx.nro
 sd:/switch/granny_nx/granny.apk
 ```
-
-`granny.apk`
 
 Hold **R** while launching an installed game to open hbmenu with full application memory, then launch Granny. Use title takeover instead of applet mode.
 
