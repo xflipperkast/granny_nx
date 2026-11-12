@@ -1,13 +1,16 @@
+
+
+
 <div align="center">
 
-<img src="icon.jpg" alt="granny2_nx" width="160">
+<img src="icon.jpg" alt="granny_nx" width="160">
 
-# granny2_nx
+# granny_nx
 
-**Granny: Chapter Two on Nintendo Switch**
+**Granny on Nintendo Switch**
 
 An unofficial Nintendo Switch port of the Android version of  
-**Granny: Chapter Two — 1.2.7**
+**Granny — 1.8.12**
 
 [![Switch](https://img.shields.io/badge/Nintendo_Switch-Homebrew-E60012?style=for-the-badge&logo=nintendoswitch&logoColor=white)](#)
 [![Ko-fi](https://img.shields.io/badge/Support_on_Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/flippyy)
@@ -18,11 +21,11 @@ An unofficial Nintendo Switch port of the Android version of
 
 ## About
 
-`granny2_nx` is an experimental standalone port of Granny: Chapter Two to Nintendo Switch.
+`granny_nx` is an experimental standalone port of Granny to Nintendo Switch.
 
 The project includes its own Switch compatibility runtime and build setup. It launches Granny directly, with no separate launcher or runtime installation.
 
-> You must provide your own legally obtained Granny: Chapter Two game files. Game assets are not part of the port's source distribution.
+> You must provide your own legally obtained Granny game files. Game assets are not part of the port's source distribution.
 
 ---
 
@@ -67,11 +70,11 @@ Granny NX supports touchscreen and Nintendo Switch controller input. Gameplay co
 - GNU Make, Python 3 and a host C compiler for checks.
 - Meson, Ninja, Bison, Flex, m4 and the Python Mako/PLY modules for the first graphics build.
 - On Windows, a working WSL distribution with the build tools installed.
-- Your own Granny: Chapter Two — 1.2.7 apk ARM64 package.
+- Your own Granny Android 1.8.12 ARM64 package.
 
 ### Compile
 
-Open a terminal in `granny2_nx`. The build script uses `/opt/devkitpro` by default; set `DEVKITPRO` and `DEVKITA64` if your SDK is elsewhere.
+Open a terminal in `granny_nx`. The build script uses `/opt/devkitpro` by default; set `DEVKITPRO` and `DEVKITA64` if your SDK is elsewhere.
 
 Build:
 make the build files example to run:
@@ -92,7 +95,7 @@ Run the host checks:
 make check
 ```
 
-The finished `granny2_nx.nro` is copied into the project folder only after passing the release checks, Build dependencies are cached in `.cache/`.
+The finished `granny_nx.nro` is copied into the project folder only after passing the release checks, Build dependencies are cached in `.cache/`.
 
 ---
 
@@ -101,11 +104,11 @@ The finished `granny2_nx.nro` is copied into the project folder only after passi
 Place these two files on your SD card:
 
 ```text
-sd:/switch/granny2_nx/granny2_nx.nro
-sd:/switch/granny2_nx/granny2.xapk
+sd:/switch/granny_nx/granny_nx.nro
+sd:/switch/granny_nx/granny.apk
 ```
 
-Hold **R** while launching an installed game to open hbmenu with full application memory, then launch Granny 2. Use title takeover instead of applet mode.
+Hold **R** while launching an installed game to open hbmenu with full application memory, then launch Granny. Use title takeover instead of applet mode.
 
 The port creates `cache/` and `saves/` inside its own folder. Keep `saves/` when updating.
 
@@ -116,9 +119,9 @@ When reporting a problem, include the port version, what happened and how to rep
 
 Logging is **off by default**. To collect a log:
 
-1. Create an empty `logging.flag` beside `granny2_nx.nro`.
+1. Create an empty `logging.flag` beside `granny_nx.nro`.
 2. Launch Granny and reproduce the problem.
-3. Collect `granny_nx.log`, plus `granny2_nx.log.prev` if you relaunched the game.
+3. Collect `granny_nx.log`, plus `granny_nx.log.prev` if you relaunched the game.
 
 Remove `logging.flag` and relaunch to turn logging off. Use `full-trace.flag` alongside it only when detailed tracing is needed; ordinary logging is preferred for gameplay reports.
 
